@@ -16,10 +16,15 @@ const ingredients = [
 
 const getIngredientList = document.getElementById("ingredients");
 
+let liArr = [];
+
 for (const ingredient of ingredients) {
   const ingredientItem = document.createElement("li");
   ingredientItem.textContent = ingredient;
   ingredientItem.classList.add("item");
-  getIngredientList.appendChild(ingredientItem);
+
+  liArr.push(ingredientItem);
 }
+
+getIngredientList.append(...liArr);
 console.log(getIngredientList);

@@ -2,7 +2,7 @@
 const controler = document.getElementById("font-size-control");
 const text = document.getElementById("text");
 
-controler.addEventListener("change", changeControler);
+controler.addEventListener("input", changeControler);
 
 function changeControler(e) {
   text.style.fontSize = `${e.currentTarget.value}px`;
